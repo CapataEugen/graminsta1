@@ -1,19 +1,14 @@
+import React from "react";
 import './App.css';
-import logo from './images/logo.png';
+import { Outlet, Link } from "react-router-dom";
+import Header from './Header';
 
-function App() {
+export default function App() {
+
   return (
     <div className="App">
-      <div className='appHeader'>
-        <img
-          className='appHeaderImage'
-          src={logo} height={50}
-          alt="logo"
-        />
-      </div>
-      <h1>Salutari</h1>
+      <Header />
+      <Outlet />
     </div>
   );
 }
-
-export default App;
